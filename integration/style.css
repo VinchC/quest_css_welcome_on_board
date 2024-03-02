@@ -1,0 +1,168 @@
+/* variables */
+
+:root {
+  --primary-color: #a306b6;
+  --secondary-color: #d9d9d9;
+  --tertiary-color: white;
+  --spacing: 1rem;
+  --fontSize: 1rem;
+  --alignElement: center;
+}
+
+/* generic selectors */
+
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+h1,
+h2 {
+  font-size: calc(var(--fontSize) * 2);
+}
+
+a,
+li {
+  text-decoration: none;
+}
+
+/* factorized selectors by shared properties */
+
+header,
+#cards article button {
+  background-color: var(--primary-color);
+}
+
+#cards article,
+footer {
+  background-color: var(--secondary-color);
+}
+
+nav ul li a,
+#cards article button,
+#welcome,
+button a {
+  color: var(--tertiary-color);
+}
+
+#articles h2,
+#about h2,
+span {
+  color: var(--primary-color);
+}
+
+#welcome,
+#cards article button {
+  font-weight: bolder;
+}
+
+main,
+footer {
+  text-align: var(--alignElement);
+}
+
+/* header + nav +  section #welcome */
+
+header {
+  height: 50vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: var(--alignElement);
+}
+
+nav img {
+  max-width: calc(var(--spacing) * 4);
+  padding: var(--spacing);
+}
+
+nav ul,
+#welcome {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: var(--alignElement);
+}
+
+nav ul li {
+  padding: var(--spacing);
+}
+
+#welcome img {
+  max-width: calc(var(--spacing) * 10);
+  border: 2px solid var(--tertiary-color);
+  border-radius: 50%;
+  background-color: var(--tertiary-color);
+}
+
+/* main */
+
+main {
+  margin: 0 15%;
+}
+
+#articles {
+  margin-bottom: 5%;
+}
+
+#articles h2,
+#about h2 {
+  margin: 3%;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#cards article {
+  display: grid;
+  grid-template-rows: 3fr 1fr 1fr;
+  width: 90%;
+  gap: calc(var(--spacing) / 2);
+  font-size: calc(var(--fontSize) * 1.5);
+}
+
+#cards article img,
+#cards article button {
+  justify-self: var(--alignElement);
+  align-self: var(--alignElement);
+}
+
+#cards article img {
+  max-width: calc(var(--spacing) * 8);
+  max-height: calc(var(--spacing) * 8);
+}
+
+#cards article button {
+  width: 40%;
+  border-radius: calc(var(--fontSize) * 2);
+  border: none;
+  padding: calc(var(--spacing) / 2);
+}
+
+#about {
+  margin: 0 30%;
+}
+
+#about p {
+  text-align: left;
+  margin: 1%;
+}
+
+/* footer */
+
+footer {
+  margin-top: 5%;
+}
+
+footer ul li {
+  padding: calc(var(--spacing) / 4);
+}
