@@ -112,6 +112,11 @@ main {
   font-weight: bolder;
 }
 
+#cards article button a {
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+
 #about p {
   margin: 1% 30%;
 }
