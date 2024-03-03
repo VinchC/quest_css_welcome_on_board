@@ -1,0 +1,132 @@
+:root {
+  --primary-color: #a306b6;
+  --secondary-color: #d9d9d9;
+  --tertiary-color: white;
+  --spacing: 1rem;
+  --fontSize: 1rem;
+  --alignElement: center;
+}
+
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+header {
+  height: 50vh;
+  background-color: var(--primary-color);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: var(--alignElement);
+}
+
+nav img {
+  max-width: calc(var(--spacing) * 4);
+  padding: var(--spacing);
+}
+
+nav ul {
+  display: flex;
+  align-items: var(--alignElement);
+}
+
+nav ul li {
+  padding: calc(var(--spacing) * 2);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+
+#welcome {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: var(--alignElement);
+  font-size: calc(var(--fontSize) * 2);
+  color: var(--tertiary-color);
+  font-weight: bold;
+}
+
+#welcome img {
+  max-width: calc(var(--spacing) * 10);
+  border: 2px solid var(--tertiary-color);
+  border-radius: 50%;
+  background: var(--tertiary-color);
+}
+
+main {
+  margin: 0 10%;
+}
+
+#articles h2,
+#about h2 {
+  text-align: var(--alignElement);
+  font-size: calc(var(--fontSize) * 2);
+  color: var(--primary-color);
+  margin: 3%;
+}
+
+#cards {
+  margin: 2%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#cards article {
+  display: grid;
+  grid-template-rows: 3fr 1fr 1fr;
+  gap: calc(var(--spacing) / 2);
+  justify-self: var(--alignElement);
+  text-align: var(--alignElement);
+  background-color: var(--secondary-color);
+  width: 90%;
+  font-size: calc(var(--fontSize) * 1.5);
+}
+
+#cards article img {
+  justify-self: var(--alignElement);
+  align-self: var(--alignElement);
+  max-width: calc(var(--spacing) * 8);
+  max-height: calc(var(--spacing) * 8);
+}
+
+#cards article button {
+  justify-self: var(--alignElement);
+  align-self: var(--alignElement);
+  width: 40%;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  border-radius: calc(var(--fontSize) * 2);
+  border: none;
+  padding: calc(var(--spacing) / 2);
+  font-weight: bolder;
+}
+
+#about p {
+  margin: 1% 30%;
+}
+
+footer {
+  margin-top: 5%;
+  background-color: var(--secondary-color);
+}
+
+footer ul li {
+  text-align: center;
+  text-decoration: none;
+  padding: calc(var(--spacing) / 4);
+}
+
+span {
+  color: var(--primary-color);
+}
